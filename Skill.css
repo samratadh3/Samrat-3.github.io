@@ -1,0 +1,80 @@
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+main:first-child{
+    gap: 0;
+}
+/* h2{
+    color: rgb(31, 194, 163);
+} */
+main>h1{
+    text-align: center;
+    padding: 35px;
+    box-sizing: border-box;
+    color:var(--defcolor);
+    text-shadow: var(--defheadcolor);
+} 
+main>.container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    background-color: var(--defbgtable);
+    border: 2px white solid;
+    border-radius: 20px;
+    margin: 0 0 20px 0;
+}
+main>.container span{
+    padding: 34px 34px;
+}
+main>.container img{
+    height: 40vh;
+    border-radius: 40px;
+}
+main>.container:nth-child(odd){
+    flex-direction: row-reverse;
+}
+main>.container>span>:nth-child(1){
+    font-size: 28px;
+    color: var(--deftxtcolor);
+}
+main>.container>span>:nth-child(2){
+    font-size: 15px;
+    color: var(--deftxtcolor);
+}
+
+@media screen and (max-width:1100px) {
+    main>.container img{
+        height: 20vw;
+        border-radius: 1px;
+    }
+    main>.container>span>:nth-child(1){
+        font-size: 25px;
+    }
+    main>.container>span>:nth-child(2){
+        font-size: 15px;
+    }
+    main>.container span{
+        padding: 17px 17px;
+    }
+    main >:first-child{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:700px) {
+    main>.container>span>:nth-child(1){
+        font-size: 10px;
+    }
+    main>.container>span>:nth-child(2){
+        font-size: 5px;
+    }
+    main>.container span{
+        padding: 17px 17px;
+    }
+}

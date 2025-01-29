@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio • Home</title>
+    <link rel="stylesheet" href="Nav.css">
+    <link rel="stylesheet" href="body.css">
+    <style>
+        main {
+            height: 80vh;
+        }
+
+        .title {
+            position: relative;
+            text-align: center;
+            padding: 0;
+            box-sizing: border-box;
+            color: var(--defcolor);
+            text-shadow: var(--defheadcolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="bg" onclick="menuclose();"></div>
+    <img src="Hamburger.svg" alt="" class="Hamburger" id="ham" onclick="menu();">
+    <section>
+        <div class="logo">Port.</div>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Skill.html">Skills</a></li>
+            <li><a href="Edu.html">Education</a></li>
+            <li><a href="Work.html">Works/Experience</a></li>
+            <li><a href="Projects.html">Projects</a></li>
+            <li><a href="Contact.html">Contacts</a></li>
+            <li onclick="menuclose()"><a>Close</a></li>
+        </ul>
+    </section>
+    <script src="index.js"></script>
+    <h1 class="title">Home</h1>
+    <main>
+        <span class="contain">
+            <div><span id="langchange">Hi</span><span id="cursor">|</span> There,</div>
+            <div>I'm <span class="name"> Samrat Adhikari</span></div>
+            <div>I Am A Learner!</div>
+            <a href="About.html"><button>About Me &nbsp;&nbsp;<img src="right arrow.svg" class="rightarrow"
+                        alt=""></button></a>
+        </span>
+        <img src="pic.jpg" class="Mypic">
+    </main>
+</body>
+
+</html>

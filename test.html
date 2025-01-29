@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Background Effect</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #f5f5f5;
+    }
+
+    .container {
+      width: 80%;
+      height: 80%;
+      display: flex;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .left-section {
+      flex: 1;
+      background: #efefef;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+
+    .right-section {
+      flex: 1;
+      background: black;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .content h1 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    .content h2 {
+      font-size: 2.5rem;
+      color: var(--deftxtcolor);
+      margin: 0.5rem 0;
+    }
+
+    .content p {
+      font-size: 1.2rem;
+      color: #666;
+    }
+
+    .icons {
+      margin-top: 1rem;
+    }
+
+    .icons a {
+      margin: 0 0.5rem;
+    }
+
+    .icons img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .profile-photo {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      max-height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="left-section">
+      <div class="content">
+        <h1>Hi, I am</h1>
+        <h2>Tomasz Gajda</h2>
+        <p>Front-end Developer / UI Designer</p>
+        <div class="icons">
+          <a href="#"><img src="email-icon.png" alt="Email"></a>
+          <a href="#"><img src="github-icon.png" alt="GitHub"></a>
+          <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+        </div>
+      </div>
+    </div>
+    <div class="right-section">
+      <img src="profile-photo.jpg" alt="Profile Photo" class="profile-photo">
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --defcolor: rgb(31, 194, 163);
+    --defheadcolor: 0 2px 27px;
+    --defbgtable: rgba(5, 5, 5, 0.356);
+    --deftxtcolor: #C4C6C7;
+    --defbodycolor: #1F2833;
+    --defmenucolor:#0B0C10;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", "Baloo Bhai 2", serif;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+    transform: none;
+    background-color: var(--defbodycolor);
+}
+
+a {
+    text-decoration: none;
+    color: #0B0C10;
+}
+
+a:visited,
+a:active {
+    color: #0B0C10;
+}
+
+.Hamburger {
+    height: 22px;
+    padding: 20px 20px 0 20px;
+    display: inline;
+}
+
+#bg {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100vh;
+    width: 100vw;
+    z-index: 9;
+}
+
+section {
+    position: absolute;
+    top:0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 30px;
+    box-shadow: 1px 0 2px grey;
+    padding: 10px 0 10px 0;
+    background-color: aliceblue;
+    height: 100vh;
+    z-index: 10;
+    width: 20vmax;
+}
+section:first-child{
+    padding: 0 10px 0 20px;
+}
+
+section>ul {
+    filter: invert(0);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: bisque; */
+    height: 100vh;
+}
+
+
+section>ul>li {
+    /* display: none; */
+    list-style: none;
+    padding: 0 23px;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+    color: var(--defmenucolor);
+}
+
+section>ul>li:first-child {
+    margin: 20px 0 0 0;
+}
+
+section>ul>li:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+    transition: 1s ease-in-out;
+}
+
+.logo {
+    display: inline;
+    font-size: 30px;
+    font-weight: 900;
+    padding: 0 2vw 0 5vw;
+    color: var(--defmenucolor);
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    width: 80vw;
+    z-index: 0;
+}
+
+.rightarrow {
+    height: 20px;
+    /* filter: invert(1); */
+    font-weight: 500;
+    padding: 0 5px 0 0;
+}
+
+main .Mypic {
+    border-radius: 50%;
+    height: 30vmax;
+    width: auto;
+}
+
+main .contain {
+    position: relative;
+    top: 20px;
+    color: var(--deftxtcolor);
+}
+
+main>.contain> :nth-child(1) {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--deftxtcolor);
+}
+
+main>.contain> :nth-child(2) {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--deftxtcolor);
+}
+
+main>.contain> :nth-child(3) {
+    font-size: 30px;
+    color: var(--deftxtcolor);
+}
+
+main>.contain button {
+    font-weight: 700;
+    font-size: 15px;
+    color: white;
+    background-color: var(--defcolor);
+    padding: 12px 30px 14px 47px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 52px;
+    box-shadow: 2px 2px 5px var(--defcolor);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main>.contain>div>.name {
+    color: var(--defcolor);
+    text-shadow: var(--defheadcolor);
+}
+
+
+
+#cursor {
+    animation: blink 1s step-start infinite;
+    font-weight: 550;
+    color: var(--defcolor);
+}
+
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+        /* Text visible */
+    }
+
+    50% {
+        opacity: 0;
+        /* Text hidden */
+    }
+
+    100% {
+        opacity: 1;
+        /* Text visible again */
+    }
+}
+
+main>.contain button:hover {
+    background-color: rgb(25, 155, 130);
+}
+
+main>.contain button:active {
+    background-color: rgb(20, 120, 100);
+}
+
+@media screen and (max-width:1100px) {
+    section ul li {
+        color: var(--deftxtcolor);
+        list-style: none;
+        font-size: 10px;
+        padding: 0 15px;
+
+    }
+    .logo{
+        font-size: 15px;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+    }
+
+    main .contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main>.contain> :nth-child(1) {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    main>.contain> :nth-child(2) {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    main>.contain> :nth-child(3) {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:370px) {
+    body {
+        max-width: none;
+        width: 100%;
+    }
+
+}

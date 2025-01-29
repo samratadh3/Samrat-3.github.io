@@ -1,0 +1,20 @@
+main{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    overflow-y: auto;
+}
+main>h1{
+    text-align: center;
+    padding: 35px;
+    box-sizing: border-box;
+    color:var(--defcolor);
+    text-shadow: var(--defheadcolor);
+}
+main>p{
+    font-size: 17px;
+    font-weight: 400;
+    text-align: justify;
+    padding: 10px;
+    color: var(--deftxtcolor);
+}
